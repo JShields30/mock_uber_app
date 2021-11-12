@@ -26,9 +26,9 @@ const Search = () => {
                     <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
                     Saved Places
                 </SavedPlaces>
-                <ConfirmLocations>
+                <ConfirmButtonContainer>
                     Confirm Locations
-                </ConfirmLocations>
+                </ConfirmButtonContainer>
             {/* Back Button Container 
             Input Container 
             Saved Places 
@@ -47,7 +47,7 @@ const ButtonContainer = tw.div`
 bg-white px-4
 `
 const BackButton = tw.img`
-h-12
+h-12 cursor-pointer
 `
 const FromToIcons = tw.div`
 w-10 flex flex-col mr-2 items-center
@@ -79,6 +79,6 @@ flex items-center bg-white px-4 py-2
 const StarIcon = tw.img`
 bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
-const ConfirmLocations = tw.div`
-bg-black h-10 text-white py-2 text-center mt-2 rounded px-2
+const ConfirmButtonContainer = tw.div`
+bg-black text-white py-3 text-center mt-2 rounded-full px-4 mx-4 text-2xl cursor-pointer
 `
