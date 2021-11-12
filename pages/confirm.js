@@ -8,7 +8,8 @@ const confirm = () => {
       <Wrapper>
           <Map />
           <RideContainer>
-
+            Ride Selector 
+            Confirm Button 
           </RideContainer>
       </Wrapper>
     )
