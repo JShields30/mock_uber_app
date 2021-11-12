@@ -26,6 +26,9 @@ const Search = () => {
                     <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
                     Saved Places
                 </SavedPlaces>
+                <ConfirmLocations>
+                    Confirm Locations
+                </ConfirmLocations>
             {/* Back Button Container 
             Input Container 
             Saved Places 
@@ -71,8 +74,11 @@ const PlusIcon =tw.img`
 w-10 h-10 bg-gray-200 rounded-full ml-3
 `
 const SavedPlaces =tw.div`
-
+flex items-center bg-white px-4 py-2
 `
 const StarIcon = tw.img`
-
+bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
+`
+const ConfirmLocations = tw.div`
+bg-black h-10 text-white py-2 text-center mt-2 rounded px-2
 `
