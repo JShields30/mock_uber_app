@@ -55,10 +55,11 @@ const Confirm = () => {
 			/>
 			<RideContainer>
                <RideSelector>
-
+                   
+                    Ride Selector
                </RideSelector>
                 <ConfirmButtonContainer>
-
+                    Confirm UberX
                 </ConfirmButtonContainer>
                 </RideContainer>
 		</Wrapper>
