@@ -6,7 +6,7 @@ const Search = () => {
     return (
         <Wrapper>
             <ButtonContainer>
-                <Link href="../">
+                <Link href="/">
                 <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png" />
                 </Link>
             </ButtonContainer>
@@ -26,9 +26,12 @@ const Search = () => {
                     <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
                     Saved Places
                 </SavedPlaces>
+                <Link href="/confirm">
                 <ConfirmButtonContainer>
                     Confirm Locations
                 </ConfirmButtonContainer>
+                </Link>
+
             {/* Back Button Container 
             Input Container 
             Saved Places 
