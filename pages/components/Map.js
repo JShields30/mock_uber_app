@@ -12,7 +12,7 @@ const Map = (props) => {
 			container: 'map',
 			style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
 			center: [-87.8, 42.2],
-			zoom: 9
+			zoom: 7
 		});
 		if(props.pickupCoordinates){
 			addToMap(map, props.pickupCoordinates)
@@ -21,6 +21,16 @@ const Map = (props) => {
 		if(props.dropoffCoordinates){
 			addToMap(map, props.dropoffCoordinates)
 		}
+
+		if(props.pickupCoordinates && props.dropoffCoordinates){
+			map.fitBounds([
+				props.dropoffCoordinates,
+				props.pickupCoordinates
+			], {
+				padding: 60
+			})
+		}
+
 	}, [props.pickupCoordinates, props.dropoffCoordinates]);
 
 	const addToMap = (map, coordinates) => {
