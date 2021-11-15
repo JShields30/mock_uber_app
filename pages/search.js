@@ -43,8 +43,8 @@ const Search = () => {
                 <Link href={{
                     pathname: "/confirm",
                     query: {
-                        pickup: "Highland Park, IL", 
-                        dropoff: "Lake Forest, IL"
+                        pickup: pickup, 
+                        dropoff: dropoff
                     }
                 }}>
                 <ConfirmButtonContainer>
