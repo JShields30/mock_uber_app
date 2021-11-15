@@ -5,8 +5,7 @@ import mapboxgl from 'mapbox-gl';
 mapboxgl.accessToken =
 	'pk.eyJ1Ijoiam9lczMxMiIsImEiOiJja3ZsbzhmaGVibGZiMnVvZjd2dHJwbXI4In0.LyMRdJiMExDGijeUTvDQmA';
 
-const Map = (props) => {
-
+const Map = props => {
 	useEffect(() => {
 		const map = new mapboxgl.Map({
 			container: 'map',
@@ -14,30 +13,24 @@ const Map = (props) => {
 			center: [-87.8, 42.2],
 			zoom: 7
 		});
-		if(props.pickupCoordinates){
-			addToMap(map, props.pickupCoordinates)
+		if (props.pickupCoordinates) {
+			addToMap(map, props.pickupCoordinates);
 		}
 
-		if(props.dropoffCoordinates){
-			addToMap(map, props.dropoffCoordinates)
+		if (props.dropoffCoordinates) {
+			addToMap(map, props.dropoffCoordinates);
 		}
 
-		if(props.pickupCoordinates && props.dropoffCoordinates){
-			map.fitBounds([
-				props.dropoffCoordinates,
-				props.pickupCoordinates
-			], {
+		if (props.pickupCoordinates && props.dropoffCoordinates) {
+			map.fitBounds([props.dropoffCoordinates, props.pickupCoordinates], {
 				padding: 60
-			})
+			});
 		}
-
 	}, [props.pickupCoordinates, props.dropoffCoordinates]);
 
 	const addToMap = (map, coordinates) => {
 		// Create a default Marker and add it to the map.
-		const marker1 = new mapboxgl.Marker()
-		.setLngLat(coordinates)
-		.addTo(map);
+		const marker1 = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
 	};
 
 	return <Wrapper id='map'></Wrapper>;
