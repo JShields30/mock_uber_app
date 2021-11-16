@@ -10,9 +10,33 @@ const RideSelector = () => {
                     <CarImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
                     <CarDetails>
                         <Service>UberX</Service>
-                        <Time>5 min away</Time>
+                        <Time>7 min away</Time>
                     </CarDetails>
                     <Price>$22</Price>
+                </Car>
+                <Car>
+                    <CarImage src="https://i.ibb.co/YDYMKny/uberxl.png" />
+                    <CarDetails>
+                        <Service>UberXL</Service>
+                        <Time>10 min away</Time>
+                    </CarDetails>
+                    <Price>$32</Price>
+                </Car>
+                <Car>
+                    <CarImage src="https://i.ibb.co/Xx4G91m/uberblack.png" />
+                    <CarDetails>
+                        <Service>UberBlack</Service>
+                        <Time>15 min away</Time>
+                    </CarDetails>
+                    <Price>$60</Price>
+                </Car>
+                <Car>
+                    <CarImage src="https://i.ibb.co/1nStPWT/uberblacksuv.png" />
+                    <CarDetails>
+                        <Service>UberBlackSUV</Service>
+                        <Time>20 min away</Time>
+                    </CarDetails>
+                    <Price>$100</Price>
                 </Car>
 
 
