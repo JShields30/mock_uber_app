@@ -68,7 +68,7 @@ const Wrapper = tw.div`
 flex h-screen flex-col
 `;
 const RideContainer = tw.div`
-flex-1 flex flex-col h-1/2
+flex-1 flex flex-col h-1/2 
 `;
 const ConfirmButtonContainer = tw.div`
 border-t-2

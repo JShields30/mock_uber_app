@@ -25,13 +25,13 @@ const RideSelector = () => {
 export default RideSelector
 
 const Wrapper = tw.div`
-flex-1 
+flex-1 overflow-y-scroll flex flex-col
 `
 const Title = tw.div`
 text-gray-500 text-center text-xs py-2 border-b
 `
 const CarList = tw.div`
-
+overflow-y-scroll
 `
 const Car = tw.div`
 flex p-4 items-center
