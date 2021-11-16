@@ -7,46 +7,16 @@ const RideSelector = () => {
         <Wrapper>
             <Title>Choose a ride, or swipe up for more</Title>
             <CarList>
-                <Car>
-                    <CarImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
-                    <CarDetails>
-                        <Service>UberX</Service>
-                        <Time>7 min away</Time>
-                    </CarDetails>
-                    <Price>$22</Price>
-                </Car>
-                <Car>
-                    <CarImage src="https://i.ibb.co/YDYMKny/uberxl.png" />
-                    <CarDetails>
-                        <Service>UberXL</Service>
-                        <Time>10 min away</Time>
-                    </CarDetails>
-                    <Price>$32</Price>
-                </Car>
-                <Car>
-                    <CarImage src="https://i.ibb.co/Xx4G91m/uberblack.png" />
-                    <CarDetails>
-                        <Service>Black</Service>
-                        <Time>15 min away</Time>
-                    </CarDetails>
-                    <Price>$60</Price>
-                </Car>
-                <Car>
-                    <CarImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
-                    <CarDetails>
-                        <Service>Comfort</Service>
-                        <Time>20 min away</Time>
-                    </CarDetails>
-                    <Price>$70</Price>
-                </Car>
-                <Car>
-                    <CarImage src="https://i.ibb.co/1nStPWT/uberblacksuv.png" />
-                    <CarDetails>
-                        <Service>Black SUV</Service>
-                        <Time>25 min away</Time>
-                    </CarDetails>
-                    <Price>$100</Price>
-                </Car>
+                { carList.map((car, index) =>(
+                           <Car key={index}>
+                           <CarImage src={car.imgUrl} />
+                           <CarDetails>
+                               <Service>{car.service}</Service>
+                               <Time>7 min away</Time>
+                           </CarDetails>
+                           <Price>$22</Price>
+                       </Car>
+                )) }
             </CarList>
         </Wrapper>
     )
