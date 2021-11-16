@@ -3,6 +3,7 @@ import tw from 'tailwind-styled-components';
 import Map from './components/Map';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import RideSelector from './components/RideSelector';
 
 const Confirm = () => {
 	const router = useRouter();
@@ -54,10 +55,7 @@ const Confirm = () => {
 				dropoffCoordinates={dropoffCoordinates}
 			/>
 			<RideContainer>
-               <RideSelector>
-                   
-                    Ride Selector
-               </RideSelector>
+               <RideSelector />
                 <ConfirmButtonContainer>
                     Confirm UberX
                 </ConfirmButtonContainer>
@@ -72,11 +70,8 @@ const Wrapper = tw.div`
 flex h-screen flex-col
 `;
 const RideContainer = tw.div`
-flex-1 
+flex-1 flex flex-col
 `;
-const RideSelector = tw.div`
-
-`
 const ConfirmButtonContainer = tw.div`
-
+bg-black text-white 
 `
