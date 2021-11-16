@@ -12,8 +12,7 @@ const Confirm = () => {
 	const [pickupCoordinates, setPickupCoordinates] = useState();
 	const [dropoffCoordinates, setDropoffCoordinates] = useState();
 
-	const getPickCoordinates = (pickup) => {
-
+	const getPickCoordinates = pickup => {
 		fetch(
 			`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?` +
 				new URLSearchParams({
@@ -27,8 +26,7 @@ const Confirm = () => {
 				setPickupCoordinates(data.features[0].center);
 			});
 	};
-	const getDropOffCoordinates = (dropoff) => {
-
+	const getDropOffCoordinates = dropoff => {
 		fetch(
 			`https://api.mapbox.com/geocoding/v5/mapbox.places/${dropoff}.json?` +
 				new URLSearchParams({
@@ -55,11 +53,11 @@ const Confirm = () => {
 				dropoffCoordinates={dropoffCoordinates}
 			/>
 			<RideContainer>
-               <RideSelector />
-                <ConfirmButtonContainer>
-                    Confirm UberX
-                </ConfirmButtonContainer>
-                </RideContainer>
+				<RideSelector />
+				<ConfirmButtonContainer>
+					<ConfirmButton>Confirm Uber</ConfirmButton>
+				</ConfirmButtonContainer>
+			</RideContainer>
 		</Wrapper>
 	);
 };
@@ -73,5 +71,8 @@ const RideContainer = tw.div`
 flex-1 flex flex-col
 `;
 const ConfirmButtonContainer = tw.div`
-bg-black text-white 
-`
+border-t-2
+`;
+const ConfirmButton = tw.div`
+bg-black text-white my-4 mx-4 text-center py-4 text-xl 
+`;
