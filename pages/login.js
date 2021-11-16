@@ -6,8 +6,8 @@ const Login = () => {
     return (
         <Wrapper>
             <UberLogo src="https://i.ibb.co/ZMhy8ws/uber-logo.png" />
+            <Title>Log in to access your account</Title>
             <HeadImage src="https://i.ibb.co/CsV9RYZ/login-image.png" />
-            <Title>Log in to access your account.</Title>
             <SignInButton>Sign in with Google</SignInButton>
         </Wrapper>
     )
@@ -28,5 +28,5 @@ const Title = tw.div`
 text-5xl pt-4 text-gray-500
 `
 const HeadImage = tw.img`
-
+object-contain w-full
 `
